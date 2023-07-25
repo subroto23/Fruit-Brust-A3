@@ -33,7 +33,10 @@
         theme: {
           extend: {
             colors: {
-              clifford: "#da373d",
+              "primary-color": "#F85559",
+              "secoundry-color": "#121212",
+              "description-color": "#12121299",
+              "white-color": "#FFF",
             },
           },
         },
@@ -47,7 +50,202 @@
       }
     </style>
   </head>
-  <body>
-    <h1 class="font-medium">Hellow</h1>
+  <body class="px-2">
+    <header>
+      <!-- Navbar Section -->
+      <nav>
+        <div
+          class="container mx-auto lg:bg-primary-color rounded-full md:mt-4 py-2 px-4 md:py-4 md:px-8 lg:text-white items-center justify-between lg:mb-8 mb-0 flex md:flex-row-reverse"
+        >
+          <!-- Search Bar -->
+          <div class="hidden xl:block">
+            <div class="relative text-secoundry-color items-center">
+              <div>
+                <input
+                  type="search"
+                  name="serch"
+                  placeholder="Search here"
+                  class="bg-white px-8 py-4 rounded-full text-sm focus:outline-none min-w-[400px]"
+                />
+              </div>
+              <div>
+                <button class="absolute right-0 top-0 mt-3 mr-4">
+                  <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Logo -->
+          <div class="flex justify-center items-center">
+            <img src="./images/logo.png" alt="" />
+            <a class="btn btn-ghost normal-case text-xl md:text-4xl font-bold"
+              >Fruit Burst</a
+            >
+          </div>
+
+          <!-- Small Device Logo and Menus Show or Hide -->
+          <div class="flex items-center">
+            <div class="dropdown">
+              <label
+                tabindex="0"
+                class="btn btn-ghost lg:hidden text-2xl md:text-4xl text-black"
+              >
+                <i class="fa-solid fa-align-justify"></i>
+              </label>
+              <ul
+                tabindex="0"
+                class="absolute -left-20 md:left-8 top-8 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box text-black w-32"
+              >
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">All Fruits</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Menus -->
+          <div class="hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-lg">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">All Fruits</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Banner Section -->
+        <div class="container mx-auto">
+          <div class="carousel w-full rounded-xl">
+            <div id="slide1" class="carousel-item relative w-full">
+              <!-- OverLay Images start -->
+              <div
+                class="hero lg:max-h-[600px] min-h-[300px]"
+                style="background-image: url('./images/banner2.png')"
+              >
+                <div class="hero-overlay lg:bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-2xl lg:space-y-6 space-y-2">
+                    <h1 class="text-2xl lg:text-7xl font-extrabold">
+                      Exotic tastes at your doorstep
+                    </h1>
+                    <p class="lg:text-xl text-sm">
+                      We supply highly quality organic products
+                    </p>
+                    <button
+                      class="p-4 md:px-8 md:py-5 bg-primary-color rounded-lg text-xl text-white"
+                    >
+                      Shop Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- OverLay Images End -->
+              <div
+                class="absolute flex justify-between transform -translate-y-3/2 left-5 right-5 md:top-1/2 top-44"
+              >
+                <a href="#slide4" class="btn btn-circle">❮</a>
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+              <!-- OverLay Images start -->
+              <div
+                class="hero lg:max-h-[600px]"
+                style="background-image: url('./images/banner1.png')"
+              >
+                <div class="hero-overlay lg:bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-2xl space-y-6">
+                    <h1 class="text-2xl lg:text-7xl font-extrabold">
+                      Exotic tastes at your doorstep
+                    </h1>
+                    <p class="lg:text-xl text-sm">
+                      We supply highly quality organic products
+                    </p>
+                    <button
+                      class="p-4 md:px-8 md:py-5 bg-primary-color rounded-lg text-xl text-white"
+                    >
+                      Shop Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- OverLay Images End -->
+              <div
+                class="absolute flex justify-between transform -translate-y-3/2 left-5 right-5 md:top-1/2 top-44"
+              >
+                <a href="#slide1" class="btn btn-circle">❮</a>
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+              <!-- OverLay Images start -->
+              <div
+                class="hero lg:max-h-[600px]"
+                style="background-image: url('./images/banner3.png')"
+              >
+                <div class="hero-overlay lg:bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-2xl space-y-6">
+                    <h1 class="text-2xl lg:text-7xl font-extrabold">
+                      Exotic tastes at your doorstep
+                    </h1>
+                    <p class="lg:text-xl text-sm">
+                      We supply highly quality organic products
+                    </p>
+                    <button
+                      class="p-4 md:px-8 md:py-5 bg-primary-color rounded-lg text-xl text-white"
+                    >
+                      Shop Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- OverLay Images End -->
+              <div
+                class="absolute flex justify-between transform -translate-y-3/2 left-5 right-5 md:top-1/2 top-44"
+              >
+                <a href="#slide2" class="btn btn-circle">❮</a>
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+              <!-- OverLay Images start -->
+              <div
+                class="hero lg:min-h-[600px]"
+                style="background-image: url('./images/banner4.png')"
+              >
+                <div class="hero-overlay lg:bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-2xl space-y-6">
+                    <h1 class="text-2xl lg:text-7xl font-extrabold">
+                      Exotic tastes at your doorstep
+                    </h1>
+                    <p class="lg:text-xl text-sm">
+                      We supply highly quality organic products
+                    </p>
+                    <button
+                      class="p-4 md:px-8 md:py-5 bg-primary-color rounded-lg text-xl text-white"
+                    >
+                      Shop Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- OverLay Images End -->
+              <div
+                class="absolute flex justify-between transform -translate-y-3/2 left-5 right-5 md:top-1/2 top-44"
+              >
+                <a href="#slide3" class="btn btn-circle">❮</a>
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Banner End -->
+      </nav>
+    </header>
+    <main></main>
+    <footer></footer>
   </body>
 </html>
